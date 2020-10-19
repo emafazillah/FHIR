@@ -12,29 +12,17 @@
                 "ExplanationOfBenefit:provider",
                 "ExplanationOfBenefit:care-team",
                 "ExplanationOfBenefit:coverage",
-                "ExplanationOfBenefit:insurer"],
-                "searchRevIncludes": [],
-                "searchParameters": {
-                    "_id": {
-                        "url": "http://hl7.org/fhir/SearchParameter/Resource-id"
-                    },
-                    "patient": {
-                        "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-patient",
-                        "required": true
-                    },
-                    "_lastUpdated": {
-                        "url": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
-                    },
-                    "type": {
-                        "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-type"
-                    },
-                    "identifier": {
-                        "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-identifier"
-                    },
-                    "service-date": {
-                        "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-service-date"
-                    }
-                }
+                "ExplanationOfBenefit:insurer",
+                "ExplanationOfBenefit:*"],
+                "searchRevIncludes": []
+            },
+            "Patient": {
+                "searchIncludes": ["Patient:general-practitioner"],
+                "searchRevIncludes": ["MedicationRequest:intended-performer"]
+            },
+            "Resource": {
+                "searchIncludes": ["MedicationRequest:patient"],
+                "searchRevIncludes": ["Provenance:target"]
             }
         }
     }
