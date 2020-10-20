@@ -45,6 +45,7 @@ public class FHIRConfiguration {
     public static final String PROPERTY_FIELD_RESOURCES_SEARCH_PARAMETER_REQUIRED = "required";
     public static final String PROPERTY_FIELD_RESOURCES_SEARCH_INCLUDES = "searchIncludes";
     public static final String PROPERTY_FIELD_RESOURCES_SEARCH_REV_INCLUDES = "searchRevIncludes";
+    public static final String PROPERTY_FIELD_RESOURCES_SEARCH_PARAMETER_COMBINATIONS = "searchParameterCombinations";
 
     // Auth and security properties
     public static final String PROPERTY_SECURITY_CORS = "fhirServer/security/cors";
